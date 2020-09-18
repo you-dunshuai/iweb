@@ -139,9 +139,105 @@
 .carousel .indicators li.active{
 	background: #ff9300;
 }
+.carousel .controls{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+.carousel .controls .prev,
+.carousel .controls .next{
+	position:absolute;
+	width: 54px;
+	height: 94px;
+	font-size: 4em;
+	line-height: 94px;
+	text-align: center;
+	background: rgba(0,0,0,0.2);
+	color: #fff;
+	margin-top: -47px;
+}
+.carousel .controls .prev{
+	margin-left: -496px;
+}
+.carousel .controls .next{
+	margin-left: 422px;
+}
+.carousel .controls .prev:hover,
+.carousel .controls .next:hover{
+	background: rgba(0,0,0,0.6);
+}
+
 .mainbar {
 	border-bottom: 1px solid #ddd;
 }
+.mainbar .header{
+	border-bottom: 3px solid #ddd;
+	position: relative;
+}
+.mainbar .header h3{
+	font-weight: normal;
+	/* 0.5简写为.5 */
+	margin-bottom: .5em;
+	padding:0 0.8em;
+}
+.mainbar .header a{
+	position: absolute;
+	right: 0;
+	bottom: .3em;
+}
+.mainbar .header span{
+	width: 7em;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	background: #00be56;
+}
+.mainbar .course{
+	padding: 1.2em 0;
+
+}
+.mainbar .course .pic img{
+	width:100%;
+}
+.mainbar .course .title{
+	display: block;
+	text-align: left;
+	line-height: 1.6em;
+}
+.mainbar .course .teacher{
+	display: block;
+	font-size: .8em;
+	color: #999;
+	text-align: left;
+}
+.mainbar .course .price{
+	display: block;
+	font-weight: bold;
+	color: #ff5a00;
+	text-align: left;
+	line-height: 1.6em;
+	
+}
+.mainbar .course .teach{
+	display: block;
+	text-align: center;
+	line-height: 1.6em;
+}
+.mainbar .course .maintalk{
+	display: block;
+	font-size: .8em;
+	color: #999;
+	text-align: center;
+}
+/* 第1/5/9个.col-lg-3中的.course没有padding-left */
+.mainbar .col-lg-3:nth-child(4n+1) .course{
+	/* padding-left: 0; */
+	/* margin-left: -1em; */
+}
+
+
+/* 底部条 */
 .bottombar {
 	background: #eee;
 }
