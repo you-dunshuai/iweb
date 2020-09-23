@@ -1,0 +1,46 @@
+.breadcrumb {
+    line-height: 32px;
+    color: #999;
+    font-size: 14px;
+
+}
+.address .clear{
+	clear: both;
+}
+.breadcrumb a{
+	color: #999;
+}
+.address {
+    width: 800px;
+    margin: 0 auto;
+
+}
+.clearfloat{
+    padding: 30px 0;
+    border-bottom: 1px dotted #ccc;
+	width: 100%;
+
+}
+.icon-location{
+	line-height: 142px;
+	font-size: 5em;
+	color: #00BE56;
+	text-align: center;
+	
+
+}
+.address_detail h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.address_detail p {
+    font-size: 14px;
+    color: #999;
+}
+@media screen and (max-width:767px){
+	.address_detail{
+		transform: translateX(100px);
+	}
+	
+}

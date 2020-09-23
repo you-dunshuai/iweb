@@ -63,53 +63,49 @@
 	line-height: 32px;
 	padding: 0  0.5em;
 }
-.my-cart >.fa{
-	color:#00be56;
-	padding:0 0.5em;
+.my-cart > .fa {
+	color: #00be56;
+	padding: 0  0.5em;
 }
-
-/* PHONE屏幕下的搜索条：LOGO+Search+Hamburger */
-@media screen and (max-width:767px){
-	.searchbar{
+/* PHONE屏幕下的搜索条：LOGO + Search + Hamburger */
+@media screen and (max-width: 767px) {
+	.searchbar {
 		background: #00be56;
 		border-bottom: 3px solid #b3efc0;
 		height: 52px;
 		font-size: 1.15em;
 	}
-	.logo-container{
-		display: flex;
-		align-items: center;
-		height: 52px;
+	.logo-container {
+		height: 52px;	/*容器的高大于内容的高，才可能有竖直居中问题*/
+		display: flex;	/*图片的容器显示模式变为：弹性盒子*/
+		align-items: center;  /*弹性盒子中的子元素居中对齐*/
 	}
-	.logo_reverse{
-		width: 100%;
+	.logo_reverse {
+		/* flex: 1; */
+		transform: translateX(10px);
+		width: 100%;	/*正常情况下，控制弹性盒子中子元素的尺寸应该使用“弹性占比（flex）”即可——此方式只会拉伸图片的宽，而不改变的高，所以此处没有使用*/
 	}
 	.search {
-		position: relative;
-		margin-top:10px;
-		top: 0;
-		right: 0;
+		position: relative;  /*相对定位—为放大镜提供定位参照物*/
+		margin-top: 9px;  /*为输入框竖直居中增加上间距*/
+		top: 0;		/*清除全局样式中定位相关修改*/
+		right: 0;	/*清除全局样式中定位相关修改*/
 	}
 	.search-input {
 		width: 100%;
-		padding: 0 3em  0  0.6em;
-		margin-right: 0;		/*让出右侧的搜索按钮的空间*/
+		padding: 0   3em   0   0.6em;
+		margin-right: 0;	/*清除之前对所有屏幕设定的间距*/
 	}
 	.search-button {
 		background: transparent;
 		color: #00be56;
 		top: -2px;
 	}
-	.hamburger{
+	.hamburger {
 		color: #fff;
 		line-height: 52px;
 		font-size: 26px;
-	}
-	.hamburger:hover{
-		cursor: pointer;
-	}
-	.navbar{
-		display: none;
+		transform: translateX(4px);
 	}
 	
 }
@@ -121,210 +117,154 @@
 	height: 52px;
 	font-size: 1.15em;
 }
-.menu{
-	
+.menu {
 }
-.menu>li{
+.menu > li {
 	float: left;
 	line-height: 49px;
-	padding: 0 1.5em;
+	padding: 0  1.5em;
 }
-.menu >li>a{
-	color:#fff;
-}
-.menu >li:hover{
+.menu > li:hover {
 	background: #00b149;
 }
-.menu>li.active{
+.menu > li.active {
 	background: #00a43d;
 }
-.user-center{
+.menu > li > a {
+	color: #fff;
+}
+.user-center {
 	background: #55c760;
 	line-height: 49px;
 }
-.user-center a,
-.user-center span{
+.user-center  a,
+.user-center  span {
 	color: #fff;
 }
-.user-center a:hover{
-	color:#ffff9b; 
+.user-center  a:hover {
+	color: #ffff9b;
 }
-/* 轮播广告 */
+@media screen and (max-width:767px) {
+	/* PHONE屏幕下导航条变为撑满整个屏幕的半透明区域 */
+	.navbar {			/*临时，非永久*/
+		/* display: none; */
+		transform: translateX(-100%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background: rgba(0,0,0,0.9);
+		height: auto;
+		z-index:9999;
+	}
+	.menu > li{
+		float: none;
+		text-align: center;
+		border-bottom: 1px solid #888;
+	}
+	/* 仅在PHONE屏幕下显示的关闭按钮 */
+	.menu-close{
+		position: absolute;
+		top: 7px;
+		right: 10px;
+		color: #fff;
+		font-size: 2em;
+	}
+}
+/* 4.轮播广告 */
 .carouselbar {
 	border-bottom: 4px solid #ddd;
 }
-.carousel{
-	/* 为绝对定位的子元素提供参照物 */
-	position: relative;
+.carousel {
+	position: relative;  /*为绝对定位的子元素提供参照物*/
 }
-.carousel .items a {
-	display: block;
+.carousel  .items  a {
+	display: block;		/*改为块级元素，可以修改宽和高*/
 	width: 100%;
 	height: 380px;
-	background-position: center;
-	/* 背景图仅显示一次不平铺 */
-	background-repeat: no-repeat;
+	background-position: center;   /*背景图的位置*/
+	background-repeat: no-repeat;  /*背景图仅显示一次，不平铺*/
 }
-.carousel .items li:not(.active){  /* 不带.active的li隐藏*/
+.carousel  .items  li:not(.active) {  /*不带.active的li隐藏*/
 	display: none;
 }
-.carousel .indicators{
-	position: absolute;
+.carousel  .indicators {
+	position: absolute;		/*圆形指示器要在图片上方*/
 	bottom: 20px;
-	left: 50%;
+	left: 50%;				/*固定定位的元素水平居中*/
 	margin-left: -72px;
 }
-.carousel .indicators li{
+.carousel  .indicators  li {
 	width: 18px;
 	height: 18px;
 	background: #ccc;
-	border-radius: 50%;
+	border-radius: 50%;  /*边框圆角半径为尺寸的一半*/
 	float: left;
-	margin: 0 9px;
-	cursor: pointer;
+	margin: 0  9px;
+	cursor: pointer;	 /*光标悬停时变为“小手”*/
 }
-.carousel .indicators li.active{
+.carousel   .indicators   li.active {
 	background: #ff9300;
 }
-.carousel .controls{
+.carousel   .controls {
 	position: absolute;
-	left: 50%;
 	top: 50%;
+	left: 50%;
 }
-.carousel .controls .prev,
-.carousel .controls .next{
-	position:absolute;
+.carousel   .controls  .prev,
+.carousel   .controls  .next {
+	position: absolute;
 	width: 54px;
 	height: 94px;
 	font-size: 4em;
-	line-height: 94px;
-	text-align: center;
-	background: rgba(0,0,0,0.2);
+	line-height: 94px;		/*文字竖直居中*/
+	text-align: center;		/*文字水平居中*/
+	/* opacity: .5;   会导致当前元素及其中的文字/图片都半透明*/
+	background: rgba(0,0,0, 0.3); /*仅背景色半透明*/
 	color: #fff;
 	margin-top: -47px;
 }
-.carousel .controls .prev{
+.carousel   .controls  .prev {
 	margin-left: -496px;
 }
-.carousel .controls .next{
-	margin-left: 422px;
+.carousel   .controls  .next {
+	margin-left: 442px;
 }
-.carousel .controls .prev:hover,
-.carousel .controls .next:hover{
-	background: rgba(0,0,0,0.6);
+.carousel   .controls  .prev:hover,
+.carousel   .controls  .next:hover {
+	background: rgba(0,0,0, 0.6);
 }
-
-.mainbar {
-	border-bottom: 1px solid #ddd;
-}
-.mainbar .header{
-	border-bottom: 3px solid #ddd;
-	position: relative;
-}
-.mainbar .header h3{
-	font-weight: normal;
-	/* 0.5简写为.5 */
-	margin-bottom: .5em;
-	padding:0 0.8em;
-}
-.mainbar .header a{
-	position: absolute;
-	right: 0;
-	bottom: .3em;
-}
-.mainbar .header span{
-	width: 7em;
-	height: 3px;
-	position: absolute;
-	left: 0;
-	bottom: -3px;
-	background: #00be56;
-}
-.mainbar .course{
-	padding: 1.2em 0;
-
-}
-.mainbar .course .pic img{
-	width:100%;
-}
-.mainbar .course .title{
-	display: block;
-	text-align: left;
-	line-height: 1.6em;
-}
-.mainbar .course .teacher{
-	display: block;
-	font-size: .8em;
-	color: #999;
-	text-align: left;
-}
-.mainbar .course .price{
-	display: block;
-	font-weight: bold;
-	color: #ff5a00;
-	text-align: left;
-	line-height: 1.6em;
-	
-}
-.mainbar .teacher-item{
-	padding: 2em 0;
-}
-.mainbar .teacher-item .pic img{
-	width: 100%;
-}
-.mainbar .teacher-item .tname{
-	font-size: 1.2em;
-	color:#555;
-	line-height: 2.6em;
-	display: block;
-	text-align: center;
-}
-.mainbar .teacher-item .maincourse{
-	display: block;
-	font-size: 0.8em;
-	color: #999;
-	text-align: center;
-}
-/* 在PAD屏幕下,讲师列表一行只能显示3.5个讲师信息，溢出内容水平滚动 */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-	.teacher-list{
-		white-space: nowrap;
-		overflow-x: auto;
+@media screen and (max-width:767px){
+	.carousel .items a{
+		height: 200px;
+		background-size: cover;
+	}
+	.carousel .controls{
+		position: static;
+	}
+	.carousel .controls .prev{
 		margin-left: 0;
-		margin-right: 0;
+		left: 0;
+		top: 50%;
 	}
-	.col-lg-5-1{
-		/*取消列浮动——浮动元素只要空间不够不然转到下一行*/
-		display: inline-block;
-		/*取消列浮动——浮动元素只要空间不够不然转到下一行*/
-		float: none;
-		/* 根据PAD评下的.container宽度(750px)，设置内容宽 */
-		width:214px;
-	}
-	
-}
-
-/* 在PHONE屏幕下,讲师列表一行只能大约显示2个讲师信息，溢出内容仍然水平滚动 */
-@media screen and (max-width: 767px){
-	.teacher-list{
-		white-space: nowrap;
-		overflow-x: auto;
+	.carousel .controls .next{
 		margin-left: 0;
-		margin-right: 0;
+		right: 0;
+		top: 50%;
 	}
-	.col-lg-5-1{
-		/*取消列浮动——浮动元素只要空间不够不然转到下一行*/
-		display: inline-block;
-		/*取消列浮动——浮动元素只要空间不够不然转到下一行*/
-		float: none;
-		/* 根据PHONE评下的.container宽度(750px)，设置内容宽 */
-		width:140px;
+
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+	.carousel .controls .prev{
+		margin-left:-375px;
+	}
+	.carousel .controls .next{
+		margin-left: 321px;	
 	}
 }
 
-
-
-/* 底部条 */
+/* 6.底部条 */
 .bottombar {
 	background: #eee;
 }
@@ -332,32 +272,60 @@
 .bottombar > .container > .row:first-child {
 	border-bottom: 1px solid #ddd;
 }
-.bottombar .fn-menu-header{
+.bottombar  .fn-menu-header {
 	margin-bottom: 5px;
-	color: #555555;
+	color: #555;
 }
-.bottombar .fn-menu{
-	color: #666666;
+.bottombar   .fn-menu {
+	color: #666;
 	line-height: 1.7em;
 }
-.bottombar .contact{
+.bottombar   .contact {
 	margin-top: 40px;
 }
-.bottombar .contact .fa-fax{
+.bottombar   .contact   .fa-fax {
 	color: #00be56;
 	font-size: 4em;
 	float: left;
 }
-.bottombar .contact .hotline{
+.bottombar   .contact   .hotline {
 	margin-left: 4em;
 	font-size: 1.4em;
 	line-height: 1.6em;
 }
-.copyright{
+.bottombar  .copyright {
 	text-align: center;
-	font-size: 0.8em;
 	color: #999;
-	font-size: .8em;
+	font-size:  .8em;
 	line-height: 2em;
-	margin: 1em 0;
+	margin: 1em  0  1.5em;
 }
+
+@media screen and (max-width:767px){
+	body{
+		/* 让body在底部留白，高度为.tabbar的高度 */
+		margin-bottom: 64px;
+	}
+	/* 7、底部的页签条 */
+	.tabbar{
+		height: 52px;
+		background: #f8f6fa;
+		border-top:1px solid #d2cfcc;
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 64px;
+	}
+	.tab{
+		color: #ccc;
+		text-align: center;
+		padding: 8px 0 0 ;
+	}
+	.tab .active{
+		color: #00be56;
+	}
+	.tab .fa{
+		font-size: 3em;
+	}
+} 
