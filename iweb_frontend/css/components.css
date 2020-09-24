@@ -107,6 +107,9 @@
 		font-size: 26px;
 		transform: translateX(4px);
 	}
+	.hamburger:hover{
+		cursor: pointer;
+	}
 	
 }
 
@@ -157,6 +160,11 @@
 		background: rgba(0,0,0,0.9);
 		height: auto;
 		z-index:9999;
+		transition: all .3s;
+	}
+	.navbar.active{
+		/* 带.active的导航条取消平移变形 */
+		transform: translateX(0);
 	}
 	.menu > li{
 		float: none;
@@ -165,11 +173,15 @@
 	}
 	/* 仅在PHONE屏幕下显示的关闭按钮 */
 	.menu-close{
+		
 		position: absolute;
 		top: 7px;
 		right: 10px;
 		color: #fff;
 		font-size: 2em;
+	}
+	.menu-close:hover{
+		cursor: pointer;
 	}
 }
 /* 4.轮播广告 */

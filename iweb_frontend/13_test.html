@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				background: royalblue;
+				width: 100px;
+				height: 100px;
+				transition: all 2s;			}
+			.box.long{
+				width: 400px;
+				height: 400px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">高度100/宽度100</div>
+		<button data-bian="chang">变宽</button>
+		<button data-bian="duan">变窄</button>
+	</body>
+	<script>
+		document.querySelector('[data-bian="chang"]').onclick=function(){
+			document.querySelector('.box').classList.add('long')
+		}
+		document.querySelector('[data-bian="duan"]').onclick=function(){
+			document.querySelector('.box').classList.remove('long')
+		}
+	</script>
+</html>
