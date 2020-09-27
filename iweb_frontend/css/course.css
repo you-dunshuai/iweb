@@ -26,3 +26,145 @@
 .course-types ul li.active a{
 	color: #fff;
 }
+
+/* 2.课程列表 */
+.course-list{
+	margin-top: 1.5em;
+	border-top: 3px solid #9ef08c;
+}
+.course{
+	padding: 2em 0;
+	border-bottom: 1px dotted #ccc;  /*圆点下边框*/
+
+	
+}
+.course .pic{
+	width: 100%;
+}
+.course .details{
+	color: #555;
+	position: relative;
+}
+.course .details h3{
+	
+}
+.course .details p{
+	line-height: 2.2em;
+	margin: 0;
+}
+.course .details span{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	font-size: 1.8em;
+	margin-top: -0.9em;
+	color: #ff5a00;
+	
+}
+.course .jump{
+	/* position: relative; */
+	
+}
+.course .jump2details{
+	margin-top: 48px;
+	background: #55c760;
+	border: none;
+	color: #fff;
+	padding: 0.8em 2em;
+}
+
+
+/* PAD屏幕下，课程列表样式调整 */
+@media screen and (min-width:768px) and (max-width:1023px){
+	.course .details h3{
+		margin:0 0 0.8em;
+	}
+	.course .details p{
+		line-height: 1.7em;
+	}
+	.course .jump2details{
+		margin-top: 32px;
+	}
+}
+
+/* PHONE屏幕下，课程/类别列表样式调整 */
+@media screen and (max-width:767px){
+	.course-types span{
+		float: none;
+	}
+	.course-types ul{
+		margin-left: 0;
+		border: 1px solid #00be56;
+		display: flex;
+	}
+	.course ul li{
+		padding: 0;
+		flex: 1;
+	}
+	.course .details h3{
+		margin:0 0 0.5em;
+	}
+	.course .details p{
+		line-height: 1.3em;
+	}
+	.course .details span{
+		position: static;
+		font-size: 1.2em;
+		/* span默认是inline元素，上下margin无效 */
+		display: block;
+		margin-top: 1.4em;
+	}
+	.course{
+		position: relative;
+		padding: 1em 0;
+	}
+	.course .jump{
+		position:absolute;
+		right: 1em;
+		bottom: 1em;
+	}
+	.course .jump .jump2details{
+		padding: 0.4em 1em;
+		margin-top: 0;
+	}
+}
+
+/* 9、组件条 */
+.pager{
+	padding: 3em 0;
+}
+.pager ul{
+	text-align: center;
+}
+
+.pager ul li{
+	display: inline-block;
+	border: 1px solid #ddd;
+	padding: 0.3em 0.4em;
+	cursor: pointer;
+}
+.pager ul li.active{
+	background: #99d989;
+	border: 1px solid #99d989;
+	cursor: default;
+}
+.pager ul li.disabled{
+	background: #f0f0f0;
+	cursor: default;
+}
+.pager ul li a{
+	color: #999;
+}
+
+.pager ul li.active a{
+	cursor: default;
+	color: #fff;
+}
+.pager ul li.disabled a{
+	cursor: default;
+	color: #ddd;
+}
+.pager ul li:not(.active):hover,
+.pager ul li:not(.disabled):hover{
+	
+}
