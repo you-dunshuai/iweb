@@ -363,3 +363,44 @@
 	margin: 0 .5em;
 	color: #999;
 }
+
+
+/* 9、组件条 */
+.pager{
+	padding: 3em 0;
+}
+.pager ul{
+	text-align: center;
+}
+
+.pager ul li{
+	display: inline-block;
+	border: 1px solid #ddd;
+	padding: 0.3em 0.4em;
+	cursor: pointer;
+}
+.pager ul li.active{
+	background: #99d989;
+	border: 1px solid #99d989;
+	cursor: default;
+}
+.pager ul li.disabled{
+	background: #f0f0f0;
+	cursor: default;
+}
+.pager ul li a{
+	color: #999;
+}
+
+.pager ul li.active a{
+	cursor: default;
+	color: #fff;
+}
+.pager ul li.disabled a{
+	cursor: default;
+	color: #ddd;
+}
+
+.pager ul li:not(.active):not(.disabled):hover{
+	border-color: #99d989;
+}
