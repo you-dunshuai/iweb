@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>课程-iWeb在线课堂</title>
+		<title>课程—iWeb在线课堂</title>
 		<link rel="icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/scaffolding.css">
@@ -65,8 +65,8 @@
 					</div>
 					<!-- 仅在PHONE屏幕显示的：汉堡包按钮 -->
 					<div class="col-sm-2 hidden-md hidden-lg">
-						<!-- 通过添加“自定义属性”，为元素添加js -->
-						<span class="fa fa-navicon hamburger" data-toggle="nav"></span>
+						<!-- 通过添加自定义属性，为元素添加JS操作 -->
+						<span data-toggle="nav" class="fa fa-navicon hamburger"></span>
 					</div>
 				</div>
 			</div>
@@ -78,44 +78,41 @@
 					<!-- 导航菜单 -->
 					<div class="col-sm-12 col-md-10 col-lg-10">
 						<ul class="menu">
-							<li><a href="#">首页</a></li>
-							<li class="active"><a href="#">全部课程</a></li>
-							<li><a href="#">基础课程</a></li>
-							<li><a href="#">核心课程</a></li>
-							<li><a href="#">进阶课程</a></li>
-							<li><a href="#">名师堂</a></li>
-							<li><a href="#">校区</a></li>
+							<li><a href="index.html">首页</a></li>
+							<li class="active"><a href="course.html">全部课程</a></li>
+							<li><a href="course.html?typeId=1">基础课程</a></li>
+							<li><a href="course.html?typeId=2">核心课程</a></li>
+							<li><a href="course.html?typeId=3">进阶课程</a></li>
+							<li><a href="teacher.html">名师堂</a></li>
+							<li><a href="school.html">校区</a></li>
 						</ul>
 						<!-- 仅在PHONE屏幕下显示的关闭按钮 -->
-						<span data-close="nav" class="menu-close hidden-md hidden-lg">
-							&times;
-						</span>
+						<span data-close="nav" class="menu-close hidden-md hidden-lg">&times;</span>
 					</div>
 					<!-- 登录和注册 -->
-					<div class="col-md-2 col-lg-2 hidden-sm">
+					<div class="col-md-2 col-lg-2  hidden-sm">
 						<div class="user-center">
 							<div class="text-center">
 								<a href="#">登录</a>
 								<span>|</span>
-								<a href="#">注册</a>
+								<a href="register.html">注册</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- 5.主体部分：mainbar -->
 		<div class="mainbar">
 			<div class="container">
-				<!-- 5.1面包屑 -->
+				<!-- 5.1 面包屑 -->
 				<div class="breadcrumb">
 					<ul>
 						<li><a href="index.html">首页</a></li>
 						<li><a href="course.html">全部课程</a></li>
 					</ul>
 				</div>
-				<!-- 5.2课程类别列表 -->
+				<!-- 5.2 课程类别 -->
 				<div class="course-types">
 					<span>课程等级：</span>
 					<ul>
@@ -125,124 +122,125 @@
 						<li><a href="#">进阶课程</a></li>
 					</ul>
 				</div>
-
-				<!-- 5.3课程列表 -->
+				<!-- 5.3 课程列表 -->
 				<div class="course-list">
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
+					<!-- 一个课程 -->
+					<div class="row  course">
+						<div class="col-sm-5 col-md-3 col-lg-3">
 							<img class="pic" src="img/course/01.jpg">
 						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
+						<div class="col-sm-7 col-md-7 col-lg-7  details">
 							<h3>12-微信小程序开发</h3>
 							<p>讲师：程涛</p>
 							<p>课时：1天</p>
 							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
+							<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
 							<span>￥599.00</span>
 						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="123" class="jump2details">查看详情</button>
+						<div class="col-md-2 col-lg-2  jump">
+							<button data-jump-to-detail="115" class="jump2details">查看详情</button>
 						</div>
 					</div>
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
-							<img class="pic" src="img/course/02.jpg">
+					<!-- 一个课程 -->
+					<div class="row  course">
+							<div class="col-sm-5 col-md-3 col-lg-3">
+								<img class="pic" src="img/course/02.jpg">
+							</div>
+							<div class="col-sm-7 col-md-7 col-lg-7  details">
+								<h3>12-微信小程序开发</h3>
+								<p>讲师：程涛</p>
+								<p>课时：1天</p>
+								<p class="hidden-sm">开课时间：每周一开课</p>
+								<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
+								<span>￥599.00</span>
+							</div>
+							<div class="col-md-2 col-lg-2  jump">
+								<button data-jump-to-detail="278" class="jump2details">查看详情</button>
+							</div>
 						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
-							<h3>12-微信小程序开发</h3>
-							<p>讲师：程涛</p>
-							<p>课时：1天</p>
-							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
-							<span>￥599.00</span>
+					<!-- 一个课程 -->
+					<div class="row  course">
+							<div class="col-sm-5 col-md-3 col-lg-3">
+								<img class="pic" src="img/course/03.jpg">
+							</div>
+							<div class="col-sm-7 col-md-7 col-lg-7  details">
+								<h3>12-微信小程序开发</h3>
+								<p>讲师：程涛</p>
+								<p>课时：1天</p>
+								<p class="hidden-sm">开课时间：每周一开课</p>
+								<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
+								<span>￥599.00</span>
+							</div>
+							<div class="col-md-2 col-lg-2  jump">
+								<button data-jump-to-detail="521" class="jump2details">查看详情</button>
+							</div>
 						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="321" class="jump2details">查看详情</button>
-						</div>
-					</div>
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
-							<img class="pic" src="img/course/03.jpg">
-						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
-							<h3>12-微信小程序开发</h3>
-							<p>讲师：程涛</p>
-							<p>课时：1天</p>
-							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
-							<span>￥599.00</span>
-						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="132" class="jump2details">查看详情</button>
-						</div>
-					</div>
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
+					<!-- 一个课程 -->
+					<div class="row  course">
+						<div class="col-sm-5 col-md-3 col-lg-3">
 							<img class="pic" src="img/course/04.jpg">
 						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
+						<div class="col-sm-7 col-md-7 col-lg-7  details">
 							<h3>12-微信小程序开发</h3>
 							<p>讲师：程涛</p>
 							<p>课时：1天</p>
 							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
+							<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
 							<span>￥599.00</span>
 						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="121" class="jump2details">查看详情</button>
+						<div class="col-md-2 col-lg-2  jump">
+							<button data-jump-to-detail="719" class="jump2details">查看详情</button>
 						</div>
 					</div>
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
-							<img class="pic" src="img/course/02.jpg">
-						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
-							<h3>12-微信小程序开发</h3>
-							<p>讲师：程涛</p>
-							<p>课时：1天</p>
-							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
-							<span>￥599.00</span>
-						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="323" class="jump2details">查看详情</button>
-						</div>
-					</div>
-					<div class="course row">
-						<div class="col-lg-3 col-md-3 col-sm-5">
+					<!-- 一个课程 -->
+					<div class="row  course">
+						<div class="col-sm-5 col-md-3 col-lg-3">
 							<img class="pic" src="img/course/05.jpg">
 						</div>
-						<div class="col-lg-7 col-md-7 col-sm-7 details">
+						<div class="col-sm-7 col-md-7 col-lg-7  details">
 							<h3>12-微信小程序开发</h3>
 							<p>讲师：程涛</p>
 							<p>课时：1天</p>
 							<p class="hidden-sm">开课时间：每周一开课</p>
-							<p class="hidden-sm">上课地点：i前端各校区 <a href="#">查看各校区地址</a></p>
+							<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
 							<span>￥599.00</span>
 						</div>
-						<div class="col-lg-2 col-md-2 jump">
-							<button data-jump-to-detail="212" class="jump2details">查看详情</button>
+						<div class="col-md-2 col-lg-2  jump">
+							<button data-jump-to-detail="901" class="jump2details">查看详情</button>
+						</div>
+					</div>
+					<!-- 一个课程 -->
+					<div class="row  course">
+						<div class="col-sm-5 col-md-3 col-lg-3">
+							<img class="pic" src="img/course/06.jpg">
+						</div>
+						<div class="col-sm-7 col-md-7 col-lg-7  details">
+							<h3>12-微信小程序开发</h3>
+							<p>讲师：程涛</p>
+							<p>课时：1天</p>
+							<p class="hidden-sm">开课时间：每周一开课</p>
+							<p class="hidden-sm">上课地点：i前端各校区 查看各校区地址</p>
+							<span>￥599.00</span>
+						</div>
+						<div class="col-md-2 col-lg-2  jump">
+							<button data-jump-to-detail="983" class="jump2details">查看详情</button>
 						</div>
 					</div>
 				</div>
-
-				<!-- 5.4分页条 -->
+				<!-- 5.4 分页条 -->
 				<div class="pager">
-					<ul>  
-						<li class="disabled"><a href="#">上一页</a></li>
+					<ul>
+						<li class="disabled"><a href="#">首页</a></li>
 						<li class="active"><a href="#">1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
 						<li><a href="#">4</a></li>
 						<li><a href="#">5</a></li>
-						<li><a href="#">下一页</a></li>
+						<li><a href="#">尾页</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-
-
-
 		<!-- 6.底部条：bottombar -->
 		<div class="bottombar hidden-sm">
 			<div class="container">
@@ -308,13 +306,13 @@
 				</div>
 			</div>
 		</div>
-		<!-- 7.页签条：tabbar-仅在PHONE中显示，约等于顶部的导航条，最多放六个-->
+		<!-- 7.页签条：tabbar——仅在PHONE中显示，功能约等于顶部的导航条，但是最多只能放六项 -->
 		<div class="tabbar hidden-md hidden-lg">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-5-1">
-						<div class="tab">
-							<span class="fa fa-home active"></span>
+						<div class="tab  active">
+							<span class="fa fa-home"></span>
 							<div>首页</div>
 						</div>
 					</div>
@@ -345,7 +343,6 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="js/components.js"></script>
 		<script src="js/course.js"></script>
 	</body>

@@ -1,0 +1,66 @@
+/* 主体部分 */
+.mainbar{
+	background: #fcfcfc;
+}
+.mainbar:before,
+.mainbar:after{
+	content:'';
+	display: table;
+}
+.mainbar .container{
+	background-color: #fff;
+	margin: 3em auto 3.5em;
+	border: 1px solid #e6e6e6;
+	/* 边框外侧有外阴影 :水平方向上的偏移量，竖直偏移量，阴影半径，阴影颜色*/
+	box-shadow: 0 0 2px #e6e6e6;
+	/* 边框的圆角半径 */
+	border-radius: 2px;
+	padding: 1em 7em 2em;
+}
+.form .header{
+	font-size: 1.4em;
+	color: #ff9300;
+	line-height: 4em;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.form .row{
+	line-height: 3em;
+	padding: .6em 0;
+}
+.form label{
+	display:block;
+	text-align: right;
+}
+.form input{
+	width: 100%;
+	padding: .8em 1em;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+.form span.error{
+	color: #f00;
+}
+.form span.succ{
+	color: #00ce60;
+}
+.form .captcha{
+	height: 34px;
+	vertical-align: middle;
+}
+.form .refresh{
+	font-size: 2em;
+	color: #00BE56;
+	line-height: 34px;
+	cursor: pointer;
+}
+/* PHONE屏幕下，调整间距及label文字居左对齐 */
+@media screen and (max-width:767px){
+	.form .row{
+		line-height: 2em;
+	}
+	.form label{
+		text-align: left;
+	}
+}
